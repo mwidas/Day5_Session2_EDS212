@@ -4,4 +4,51 @@ format: html
 editor: visual
 ---
 
-## Creating the document
+```{r}
+library(tidyverse)
+```
+
+## Some logical operators
+
+-   == does this match?
+
+-   != do these not match
+
+-   \>, \<, \>=, \<=
+
+-   &, \| or
+
+```{r}
+# Does 4 match 5
+4 == 5
+# does 4 match 4
+4 == 4 
+# does 4 not match 5
+4 != 5
+# does 4 not match 4
+4 != 4
+
+#does 4 match "4"
+4 == "4"
+
+#with assigned variables
+cat <- 10
+dog <- 7
+
+cat > dog
+
+#is dog greater than cat, OR is cat less than 20 - 1 is right so it shows true
+dog > cat | cat < 20
+
+#is dog less than cat AND cat == 10
+dog < cat & cat == 10
+```
+
+```{r}
+
+ggplot(data = mtcars, aes(x = wt, y = mpg)) +
+  geom_point(aes(size = mpg, color = wt)) +
+  labs(x = "car weight (1000 pounds)",
+       y = "Gas mileage (mpg)",
+       title = "Car weight efficiency relationship")
+```
